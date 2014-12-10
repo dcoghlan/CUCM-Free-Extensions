@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.cisco.com/AXL/API/8.5">
+ 
+    <soapenv:Header/>
+ 
+    <soapenv:Body>
+ 
+        <ns:executeSQLQuery sequence="?">
+ 
+            <sql>select np.dnorpattern from numplan as np INNER JOIN routepartition as rp on np.fkroutepartition = rp.pkid where rp.name = "vpartition" AND np.dnorpattern BETWEEN "xxxxx" and "yyyyy"  order by np.dnorpattern</sql>
+ 
+        </ns:executeSQLQuery>
+ 
+    </soapenv:Body>
+ 
+</soapenv:Envelope>
